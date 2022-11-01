@@ -12,4 +12,11 @@ public class Average {
         }
         return tot;
     }
+
+    public Double getAvgUsingStreams(List<Integer> list) {
+        return list.stream()
+                .mapToDouble(d -> d)
+                .average()
+                .orElse(0.0);
+    }
 }
