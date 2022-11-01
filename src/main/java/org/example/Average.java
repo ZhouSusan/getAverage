@@ -2,7 +2,7 @@ package org.example;
 import java.util.List;
 
 public class Average {
-    public Double getAverage(List<Integer> list) {
+    public static Double getAverage(List<Integer> list) {
         double tot = 0;
         if (!list.isEmpty()) {
             for (int num : list) {
@@ -13,7 +13,7 @@ public class Average {
         return tot;
     }
 
-    public Double getAvgUsingStreams(List<Integer> list) {
+    public static Double getAvgUsingStreams(List<Integer> list) {
         return list.stream()
                 .mapToDouble(d -> d)
                 .average()
